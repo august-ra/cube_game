@@ -50,8 +50,8 @@ Array.prototype.rotateX = function (theta) {
 
   return [
     x,
-    y * Math.cos(theta) - z * Math.sin(theta),
-    y * Math.sin(theta) + z * Math.cos(theta),
+    y * Math.cos(theta) + z * Math.sin(theta),
+    -y * Math.sin(theta) + z * Math.cos(theta),
   ]
 }
 
@@ -59,9 +59,9 @@ Array.prototype.rotateY = function (theta) {
   const [x, y, z] = this
 
   return [
-    x * Math.cos(theta) + z * Math.sin(theta),
+    x * Math.cos(theta) - z * Math.sin(theta),
     y,
-    -x * Math.sin(theta) + z * Math.cos(theta),
+    x * Math.sin(theta) + z * Math.cos(theta),
   ]
 }
 
@@ -69,8 +69,8 @@ Array.prototype.rotateZ = function (theta) {
   const [x, y, z] = this
 
   return [
-    x * Math.cos(theta) - y * Math.sin(theta),
-    x * Math.sin(theta) + y * Math.cos(theta),
+    x * Math.cos(theta) + y * Math.sin(theta),
+    -x * Math.sin(theta) + y * Math.cos(theta),
     z,
   ]
 }
